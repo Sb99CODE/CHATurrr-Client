@@ -1,6 +1,6 @@
 import { Skeleton, keyframes, styled } from "@mui/material";
 import { Link as LinkComponent } from "react-router-dom";
-import { grayColor, matBlack } from "../../constants/color";
+import { grayColor, clicked } from "../../constants/color";
 
 const VisuallyHiddenInput = styled("input")({
   border: 0,
@@ -49,7 +49,7 @@ const CurveButton = styled("button")`
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: ${matBlack};
+  background-color: ${clicked};
   color: white;
   font-size: 1.1rem;
   &:hover {

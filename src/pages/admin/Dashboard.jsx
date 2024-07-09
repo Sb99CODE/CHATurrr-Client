@@ -22,7 +22,7 @@ import {
   CurveButton,
   SearchField,
 } from "../../components/styles/StyledComponents";
-import { matBlack } from "../../constants/color";
+import { clicked } from "../../constants/color";
 import { server } from "../../constants/config";
 import { useErrors } from "../../hooks/hook";
 
@@ -189,7 +189,7 @@ const Widget = ({ title, value, Icon }) => (
         sx={{
           color: "rgba(0,0,0,0.7)",
           borderRadius: "50%",
-          border: `5px solid ${matBlack}`,
+          border: `5px solid ${clicked}`,
           width: "5rem",
           height: "5rem",
           display: "flex",

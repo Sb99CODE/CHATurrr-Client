@@ -24,7 +24,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { LayoutLoader } from "../components/layout/Loaders";
 import AvatarCard from "../components/shared/AvatarCard";
 import { Link } from "../components/styles/StyledComponents";
-import { bgGradient, matBlack } from "../constants/color";
+import { bgGradient, clicked } from "../constants/color";
 import { useDispatch, useSelector } from "react-redux";
 import UserItem from "../components/shared/UserItem";
 import { useAsyncMutation, useErrors } from "../hooks/hook";
@@ -185,7 +185,7 @@ const Groups = () => {
             position: "absolute",
             top: "2rem",
             left: "2rem",
-            bgcolor: matBlack,
+            bgcolor: clicked,
             color: "white",
             ":hover": {
               bgcolor: "rgba(0,0,0,0.7)",

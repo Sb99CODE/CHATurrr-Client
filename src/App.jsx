@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ProtectRoute from "./components/auth/ProtectRoute";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { LayoutLoader } from "./components/layout/Loaders";
 import axios from "axios";
 import { server } from "./constants/config";
@@ -44,7 +44,7 @@ const App = () => {
           <Route
             element={
               <SocketProvider>
-                <ProtectRoute user={user} />
+                <ProtectedRoute user={user} />
               </SocketProvider>
             }
           >
@@ -56,9 +56,9 @@ const App = () => {
           <Route
             path="/login"
             element={
-              <ProtectRoute user={!user} redirect="/">
+              <ProtectedRoute user={!user} redirect="/">
                 <Login />
-              </ProtectRoute>
+              </ProtectedRoute>
             }
           />
 

@@ -38,7 +38,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const toastId = toast.loading("Logging In...");
+    const toastId = toast.loading("Logging in to CHATur...");
 
     setIsLoading(true);
     const config = {
@@ -113,7 +113,9 @@ const Login = () => {
   return (
     <div
       style={{
-        backgroundImage: bgGradient,
+        backgroundColor: "#8EC5FC",
+        backgroundImage: "linear-gradient(to bottom right, #34c8cb, #067c7e"
+        ,
       }}
     >
       <Container
@@ -137,7 +139,10 @@ const Login = () => {
         >
           {isLogin ? (
             <>
-              <Typography variant="h5">Login</Typography>
+              <Typography variant="h5">
+                <pre><b><i>
+                  CHATUR: Chat with your friends</i></b></pre>
+              </Typography>
               <form
                 style={{
                   width: "100%",
@@ -189,13 +194,13 @@ const Login = () => {
                   variant="text"
                   onClick={toggleLogin}
                 >
-                  Sign Up Instead
+                  Pehli baar aaye ho ?
                 </Button>
               </form>
             </>
           ) : (
             <>
-              <Typography variant="h5">Sign Up</Typography>
+             <Typography variant="h5"><b>Sign up karlo</b></Typography>
               <form
                 style={{
                   width: "100%",
@@ -203,11 +208,11 @@ const Login = () => {
                 }}
                 onSubmit={handleSignUp}
               >
-                <Stack position={"relative"} width={"10rem"} margin={"auto"}>
+                <Stack position={"relative"} width={"8rem"} margin={"auto"}>
                   <Avatar
                     sx={{
-                      width: "10rem",
-                      height: "10rem",
+                      width: "8rem",
+                      height: "8rem",
                       objectFit: "contain",
                     }}
                     src={avatar.preview}
@@ -238,7 +243,7 @@ const Login = () => {
 
                 {avatar.error && (
                   <Typography
-                    m={"1rem auto"}
+                    m={"0.5rem auto"}
                     width={"fit-content"}
                     display={"block"}
                     color="error"
@@ -261,16 +266,7 @@ const Login = () => {
                 <TextField
                   required
                   fullWidth
-                  label="Bio"
-                  margin="normal"
-                  variant="outlined"
-                  value={bio.value}
-                  onChange={bio.changeHandler}
-                />
-                <TextField
-                  required
-                  fullWidth
-                  label="Username"
+                  label="Username (unique)"
                   margin="normal"
                   variant="outlined"
                   value={username.value}
@@ -282,6 +278,16 @@ const Login = () => {
                     {username.error}
                   </Typography>
                 )}
+
+                <TextField
+                  required
+                  fullWidth
+                  label="Bio"
+                  margin="normal"
+                  variant="outlined"
+                  value={bio.value}
+                  onChange={bio.changeHandler}
+                />
 
                 <TextField
                   required
@@ -307,7 +313,7 @@ const Login = () => {
                   Sign Up
                 </Button>
 
-                <Typography textAlign={"center"} m={"1rem"}>
+                <Typography textAlign={"center"} m={"0rem"}>
                   OR
                 </Typography>
 

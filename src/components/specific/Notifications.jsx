@@ -54,7 +54,7 @@ const Notifications = () => {
                 />
               ))
             ) : (
-              <Typography textAlign={"center"}>0 notifications</Typography>
+              <Typography textAlign={"center"}>No notifications</Typography>
             )}
           </>
         )}
@@ -87,7 +87,7 @@ const NotificationItem = memo(({ sender, _id, handler }) => {
             width: "100%",
           }}
         >
-          {`${name} sent you a friend request.`}
+          {`${name} has sent you a friend request.`}
         </Typography>
 
         <Stack

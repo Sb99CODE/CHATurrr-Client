@@ -32,10 +32,15 @@ const ChatItem = ({
           display: "flex",
           gap: "1rem",
           alignItems: "center",
-          backgroundColor: sameSender ? clicked : "unset",
-          color: sameSender ? "unset" : "unset",
+          background: sameSender ? "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)" : "unset",
+          color: sameSender ? "white" : "unset",
           position: "relative",
-          padding: "1rem",
+          padding: "0.2rem",
+          borderRadius: "10px",
+          // boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+          width: '100%',
+          maxWidth: '500px',
+          margin: '3px auto',
         }}
       >
         <AvatarCard avatar={avatar} />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Stack, Typography } from "@mui/material";
+import { Avatar, Box, Stack, Typography } from "@mui/material";
 import {
   Face as FaceIcon,
   AlternateEmail as UserNameIcon,
@@ -7,6 +7,7 @@ import {
 } from "@mui/icons-material";
 import moment from "moment";
 import { transformImage } from "../../lib/features";
+import { theme } from "../../constants/color";
 
 const Profile = ({ user }) => {
   return (
@@ -14,8 +15,8 @@ const Profile = ({ user }) => {
       <Avatar
         src={transformImage(user?.avatar?.url)}
         sx={{
-          width: 200,
-          height: 200,
+          width: 150,
+          height: 150,
           objectFit: "contain",
           marginBottom: "1rem",
           border: "7px solid white",
@@ -38,22 +39,37 @@ const Profile = ({ user }) => {
 };
 
 const ProfileCard = ({ text, Icon, heading }) => (
-  <Stack
-    direction={"row"}
-    alignItems={"center"}
-    spacing={"1rem"}
-    color={"white"}
-    textAlign={"center"}
+  <Box
+    display={"flex"}
+    flexDirection={"row"}
+    justifyContent={"center"}
+    sx={{
+      padding: "0.2rem",
+      borderRadius: "10px",
+      background: "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)",
+      boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+      width: '100%',
+      maxWidth: '500px',
+      margin: '0 auto',
+    }}
   >
-    {Icon && Icon}
+    <Stack
+      direction={"row"}
+      alignItems={"center"}
+      spacing={"1rem"}
+      color={"white"}
+      textAlign={"center"}
+    >
+      {Icon && Icon}
 
-    <Stack>
-      <Typography variant="body1">{text}</Typography>
-      <Typography color={"gray"} variant="caption">
-        {heading}
-      </Typography>
+      <Stack>
+        <Typography variant="body1">{text}</Typography>
+        <Typography color={"lightgray"} variant="caption">
+          {heading}
+        </Typography>
+      </Stack>
     </Stack>
-  </Stack>
+  </Box>
 );
 
 export default Profile;

@@ -237,8 +237,8 @@ const Chat = ({ chatId, user }) => {
           <IconButton
             type="submit"
             sx={{
-              rotate: "-30deg",
-              bgcolor: orange,
+              // rotate: "-30deg",
+              bgcolor: "rgba(0,0,0,0.7)",
               color: "white",
               marginLeft: "1rem",
               padding: "0.5rem",

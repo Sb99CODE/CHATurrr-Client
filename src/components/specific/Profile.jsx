@@ -18,7 +18,7 @@ const Profile = ({ user }) => {
           height: 200,
           objectFit: "contain",
           marginBottom: "1rem",
-          border: "5px solid white",
+          border: "7px solid white",
         }}
       />
       <ProfileCard heading={"Bio"} text={user?.bio} />

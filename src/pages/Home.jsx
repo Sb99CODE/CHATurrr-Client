@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <Box bgcolor={grayColor} height={"100%"}>
       <Typography p={"2rem"} variant="h5" textAlign={"center"}>
-        Select a friend to chat
+       <b> Select a friend from menu to start CHATurring</b>
       </Typography>
     </Box>
   );

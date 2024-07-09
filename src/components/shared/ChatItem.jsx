@@ -33,7 +33,7 @@ const ChatItem = ({
           gap: "1rem",
           alignItems: "center",
           backgroundColor: sameSender ? clicked : "unset",
-          color: sameSender ? "white" : "unset",
+          color: sameSender ? "unset" : "unset",
           position: "relative",
           padding: "1rem",
         }}

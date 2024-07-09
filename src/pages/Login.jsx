@@ -200,19 +200,20 @@ const Login = () => {
             </>
           ) : (
             <>
-             <Typography variant="h5"><b>Sign up karlo</b></Typography>
+             {/* <Typography variant="h5"><b>Sign up karlo</b></Typography> */}
               <form
                 style={{
                   width: "100%",
-                  marginTop: "1rem",
+                  marginTop: "0.2rem",
                 }}
                 onSubmit={handleSignUp}
+                
               >
-                <Stack position={"relative"} width={"8rem"} margin={"auto"}>
+                <Stack position={"relative"} width={"7.5rem"} margin={"auto"}>
                   <Avatar
                     sx={{
-                      width: "8rem",
-                      height: "8rem",
+                      width: "7.5rem",
+                      height: "7.5rem",
                       objectFit: "contain",
                     }}
                     src={avatar.preview}
@@ -313,7 +314,7 @@ const Login = () => {
                   Sign Up
                 </Button>
 
-                <Typography textAlign={"center"} m={"0rem"}>
+                <Typography textAlign={"center"} m={"0.2rem"}>
                   OR
                 </Typography>
 
@@ -325,7 +326,7 @@ const Login = () => {
                 >
                   Login Instead
                 </Button>
-              </form>
+              </form >
             </>
           )}
         </Paper>

@@ -23,16 +23,16 @@ const Profile = ({ user }) => {
         }}
       />
       <ProfileCard heading={"Bio"} text={user?.bio} />
-      <ProfileCard
-        heading={"Username"}
-        text={user?.username}
-        Icon={<UserNameIcon />}
-      />
       <ProfileCard heading={"Name"} text={user?.name} Icon={<FaceIcon />} />
       <ProfileCard
         heading={"Joined"}
         text={moment(user?.createdAt).fromNow()}
         Icon={<CalendarIcon />}
+      />
+      <ProfileCard
+        heading={"Username"}
+        text={user?.username}
+        Icon={<UserNameIcon />}
       />
     </Stack>
   );

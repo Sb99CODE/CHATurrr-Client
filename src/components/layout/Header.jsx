@@ -21,7 +21,7 @@ import React, { Suspense, lazy } from "react";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { clicked } from "../../constants/color";
+import { bgGradient, clicked, theme } from "../../constants/color";
 import { server } from "../../constants/config";
 import { userNotExists } from "../../redux/reducers/auth";
 import { resetNotificationCount } from "../../redux/reducers/chat";
@@ -87,8 +87,9 @@ const Header = () => {
               sx={{
                 display: { xs: "none", sm: "block" },
               }}
-            >
+            ><b><i>
               CHATur
+              </i></b>
             </Typography>
 
             <Box
@@ -165,7 +166,7 @@ const Header = () => {
 const IconBtn = ({ title, icon, onClick, value }) => {
   return (
     <Tooltip title={title}>
-      <IconButton color="inherit" size="medium" onClick={onClick}>
+      <IconButton color="inherit" size="larger" onClick={onClick}>
         {value ? (
           <Badge badgeContent={value} color="error">
             {icon}

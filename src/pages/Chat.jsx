@@ -221,7 +221,7 @@ const Chat = ({ chatId, user }) => {
             sx={{
               position: "absolute",
               left: "1.5rem",
-              rotate: "30deg",
+              // rotate: "30deg",
             }}
             onClick={handleFileOpen}
           >
@@ -232,6 +232,9 @@ const Chat = ({ chatId, user }) => {
             placeholder="Type Message Here..."
             value={message}
             onChange={messageOnChange}
+            style={{
+              width:"100%",
+            }}
           />
 
           <IconButton
@@ -243,7 +246,7 @@ const Chat = ({ chatId, user }) => {
               marginLeft: "1rem",
               padding: "0.5rem",
               "&:hover": {
-                bgcolor: "error.dark",
+                bgcolor: "rgba(0,0,0,0.9)",
               },
             }}
           >

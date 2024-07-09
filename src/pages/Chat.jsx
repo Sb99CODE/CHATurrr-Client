@@ -95,7 +95,6 @@ const Chat = ({ chatId, user }) => {
 
     if (!message.trim()) return;
 
-    // Emitting the message to the server
     socket.emit(NEW_MESSAGE, { chatId, members, message });
     setMessage("");
   };
@@ -232,9 +231,9 @@ const Chat = ({ chatId, user }) => {
             placeholder="Type Message Here..."
             value={message}
             onChange={messageOnChange}
-            style={{
-              width:"100%",
-            }}
+            // style={{
+            //   width:"100%",
+            // }}
           />
 
           <IconButton

@@ -140,8 +140,7 @@ const Login = () => {
           {isLogin ? (
             <>
               <Typography variant="h5">
-                <pre><b><i>
-                  CHATUR: Chat with your friends</i></b></pre>
+                <pre><i> Chat with your friends</i></pre>
               </Typography>
               <form
                 style={{
@@ -200,14 +199,14 @@ const Login = () => {
             </>
           ) : (
             <>
-             {/* <Typography variant="h5"><b>Sign up karlo</b></Typography> */}
+              {/* <Typography variant="h5"><b>Sign up karlo</b></Typography> */}
               <form
                 style={{
                   width: "100%",
                   marginTop: "0.2rem",
                 }}
                 onSubmit={handleSignUp}
-                
+
               >
                 <Stack position={"relative"} width={"7.5rem"} margin={"auto"}>
                   <Avatar

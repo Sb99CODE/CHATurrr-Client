@@ -274,6 +274,7 @@ const Groups = () => {
             xs: "none",
             sm: "block",
           },
+          bgcolor:grayColor
         }}
         sm={4}
       >
@@ -296,16 +297,7 @@ const Groups = () => {
 
         {groupName && (
           <>
-            {GroupName}
-
-            <Typography
-              margin={"2rem"}
-              alignSelf={"flex-start"}
-              variant="body1"
-            >
-              Members
-            </Typography>
-
+            {GroupName }
             <Stack
               maxWidth={"45rem"}
               width={"100%"}
@@ -315,12 +307,11 @@ const Groups = () => {
                 xs: "0",
                 md: "1rem 4rem",
               }}
-              spacing={"2rem"}
+              spacing={"1rem"}
               height={"50vh"}
               overflow={"auto"}
             >
-              {/* Members */}
-
+           {/* {members} */}
               {isLoadingRemoveMember ? (
                 <CircularProgress />
               ) : (
@@ -331,8 +322,9 @@ const Groups = () => {
                     isAdded
                     styling={{
                       boxShadow: "0 0 0.5rem  rgba(0,0,0,0.2)",
-                      padding: "1rem 2rem",
+                      padding: "0.5rem 1rem",
                       borderRadius: "1rem",
+                      width:"80%",
                     }}
                     handler={removeMemberHandler}
                   />
@@ -381,43 +373,71 @@ const Groups = () => {
   );
 };
 
-const GroupsList = ({ w = "100%", myGroups = [], chatId }) => (
-  <Stack
-    width={w}
-    sx={{
-      backgroundImage: bgGradient,
-      height: "100vh",
-      overflow: "auto",
-    }}
-  >
-    {myGroups.length > 0 ? (
-      myGroups.map((group) => (
-        <GroupListItem group={group} chatId={chatId} key={group._id} />
-      ))
-    ) : (
-      <Typography textAlign={"center"} padding="1rem">
-        No groups
-      </Typography>
-    )}
-  </Stack>
-);
+const GroupsList = ({ w = "100%", myGroups = [], chatId }) => {
+  const [selectedGroupId, setSelectedGroupId] = useState(null);
 
-const GroupListItem = memo(({ group, chatId }) => {
-  const { name, avatar, _id } = group;
+  const handleGroupClick = (groupId) => {
+    setSelectedGroupId(groupId);
+  };
 
   return (
-    <Link
-      to={`?group=${_id}`}
-      onClick={(e) => {
-        if (chatId === _id) e.preventDefault();
+    <Stack
+      width={w}
+      sx={{
+        backgroundImage: bgGradient,
+        height: "100vh",
+        overflow: "auto",
       }}
     >
-      <Stack direction={"row"} spacing={"1rem"} alignItems={"center"}>
-        <AvatarCard avatar={avatar} />
-        <Typography>{name}</Typography>
-      </Stack>
-    </Link>
+      {myGroups.length > 0 ? (
+        myGroups.map((group) => (
+          <GroupListItem
+            group={group}
+            chatId={chatId}
+            key={group._id}
+            selectedGroupId={selectedGroupId}
+            handleGroupClick={handleGroupClick}
+          />
+        ))
+      ) : (
+        <Typography
+          textAlign={"center"}
+          padding="1rem"
+          color={"white"}
+          display={"bold"}
+        >
+          No groups
+        </Typography>
+      )}
+    </Stack>
   );
-});
+};
+
+const GroupListItem = memo(
+  ({ group, chatId, selectedGroupId, handleGroupClick }) => {
+    const { name, avatar, _id } = group;
+
+    return (
+      <Link
+        to={`?group=${_id}`}
+        onClick={(e) => {
+          if (chatId === _id) e.preventDefault();
+          handleGroupClick(_id);
+        }}
+        style={{
+          borderRadius: selectedGroupId === _id ? "10px": "0px",
+          background: selectedGroupId === _id ? "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)":"transparent",
+          boxShadow: selectedGroupId === _id ? "0 4px 12px rgba(0,0,0,0.6)":"transparent",
+        }}
+      >
+        <Stack direction={"row"} spacing={"1rem"} alignItems={"center"}>
+          <AvatarCard avatar={avatar} />
+          <Typography color={"white"}>{name}</Typography>
+        </Stack>
+      </Link>
+    );
+  }
+);
+
 
 export default Groups;

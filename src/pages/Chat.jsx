@@ -187,7 +187,8 @@ const Chat = ({ chatId, user }) => {
         boxSizing={"border-box"}
         padding={"1rem"}
         spacing={"1rem"}
-        bgcolor={grayColor}
+        // bgcolor={grayColor}
+        bgcolor={"transparent"}
         height={"90%"}
         sx={{
           overflowX: "hidden",
@@ -212,14 +213,14 @@ const Chat = ({ chatId, user }) => {
         <Stack
           direction={"row"}
           height={"100%"}
-          padding={"1rem"}
+          padding={"0.5rem"}
           alignItems={"center"}
           position={"relative"}
         >
           <IconButton
             sx={{
               position: "absolute",
-              left: "1.5rem",
+              left: "1rem",
             }}
             onClick={handleFileOpen}
           >
@@ -227,7 +228,7 @@ const Chat = ({ chatId, user }) => {
           </IconButton>
 
           <InputBox
-            placeholder="Type Message Here..."
+            placeholder="Type Message Here...."
             value={message}
             onChange={messageOnChange}
           />

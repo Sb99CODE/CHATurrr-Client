@@ -1,7 +1,7 @@
 import React from "react";
 import { Avatar, Box, Stack, Typography } from "@mui/material";
 import {
-  Face as FaceIcon,
+  PermIdentityOutlined as FaceIcon,
   AlternateEmail as UserNameIcon,
   CalendarMonth as CalendarIcon,
 } from "@mui/icons-material";

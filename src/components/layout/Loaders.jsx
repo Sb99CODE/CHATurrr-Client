@@ -3,6 +3,11 @@ import React from "react";
 import styled, { createGlobalStyle, keyframes } from "styled-components";
 import { BouncingSkeleton } from "../styles/StyledComponents";
 
+const link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css2?family=Playwrite+PE:wght@100..400&display=swap';
+link.rel = 'stylesheet';
+document.head.appendChild(link);
+
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Montserrat', sans-serif;
@@ -54,6 +59,7 @@ const moveLetters = keyframes`
 `;
 
 const LoadingText = styled.div`
+  font-family: Playwrite PE, Arial, sans-serif;
   font-size: 5vw;
   line-height: 64px;
   letter-spacing: 10px;
@@ -87,12 +93,11 @@ const LayoutLoader = () => {
         <LoadingContainer>
           <LoadingText>
             <span>C</span>
-            <span>H</span>
-            <span>A</span>
-            <span>T</span>
+            <span>h</span>
+            <span>a</span>
+            <span>t</span>
             <span>u</span>
             <span>r</span>
-            {/* <span>G</span> */}
           </LoadingText>
         </LoadingContainer>
       </Container>

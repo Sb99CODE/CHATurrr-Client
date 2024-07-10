@@ -15,7 +15,7 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { VisuallyHiddenInput } from "../components/styles/StyledComponents";
-import { bgGradient } from "../constants/color";
+import { bgGradient, clicked, theme } from "../constants/color";
 import { server } from "../constants/config";
 import { userExists } from "../redux/reducers/auth";
 import { usernameValidator } from "../utils/validators";
@@ -38,7 +38,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const toastId = toast.loading("Logging in to CHATur...");
+    const toastId = toast.loading("Logging in to Chatur...");
 
     setIsLoading(true);
     const config = {
@@ -139,8 +139,11 @@ const Login = () => {
         >
           {isLogin ? (
             <>
-              <Typography variant="h5">
-                <pre><i> Chat with your friends</i></pre>
+              <Typography variant="h4"
+              style={{
+                color:"black"
+              }}>
+                Login
               </Typography>
               <form
                 style={{
@@ -193,7 +196,7 @@ const Login = () => {
                   variant="text"
                   onClick={toggleLogin}
                 >
-                  Pehli baar aaye ho ?
+                  Signup instead
                 </Button>
               </form>
             </>

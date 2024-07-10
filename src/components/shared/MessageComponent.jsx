@@ -19,7 +19,7 @@ const MessageComponent = ({ message, user }) => {
       whileInView={{ opacity: 1, x: 0 }}
       style={{
         alignSelf: sameSender ? "flex-end" : "flex-start",
-        backgroundColor: "white",
+        backgroundColor: "#e4f7fa",
         color: "black",
         borderRadius: "5px",
         padding: "0.5rem",

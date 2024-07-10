@@ -3,7 +3,7 @@ import { Link } from "../styles/StyledComponents";
 import { Box, Stack, Typography } from "@mui/material";
 import AvatarCard from "./AvatarCard";
 import { motion } from "framer-motion";
-import { clicked } from "../../constants/color";
+import { clicked, grayColor } from "../../constants/color";
 
 const ChatItem = ({
   avatar = [],
@@ -32,7 +32,7 @@ const ChatItem = ({
           display: "flex",
           gap: "1rem",
           alignItems: "center",
-          background: sameSender ? "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)" : "white",
+          background: sameSender ? "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)" : grayColor,
           color: sameSender ? "white" : "unset",
           position: "relative",
           padding: "0.2rem",

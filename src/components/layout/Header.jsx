@@ -21,7 +21,7 @@ import React, { Suspense, lazy } from "react";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { bgGradient, clicked, theme } from "../../constants/color";
+import { clicked } from "../../constants/color";
 import { server } from "../../constants/config";
 import { userNotExists } from "../../redux/reducers/auth";
 import { resetNotificationCount } from "../../redux/reducers/chat";
@@ -31,6 +31,11 @@ import {
   setIsNotification,
   setIsSearch,
 } from "../../redux/reducers/misc";
+
+const link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css2?family=Playwrite+PE:wght@100..400&display=swap';
+link.rel = 'stylesheet';
+document.head.appendChild(link);
 
 const SearchDialog = lazy(() => import("../specific/Search"));
 const NotifcationDialog = lazy(() => import("../specific/Notifications"));
@@ -83,13 +88,15 @@ const Header = () => {
         >
           <Toolbar>
             <Typography
-              variant="h6"
+              variant="h5"
               sx={{
                 display: { xs: "none", sm: "block" },
               }}
-            ><b><i>
-              CHATur
-              </i></b>
+              style={{
+                fontFamily: 'Playwrite PE, Arial, sans-serif',
+                fontWeight:'bold'
+              }}
+            >Chatur
             </Typography>
 
             <Box

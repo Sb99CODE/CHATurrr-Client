@@ -94,7 +94,7 @@ const Sidebar = ({ w = "100%" }) => {
           <Stack direction={"row"} alignItems={"center"} spacing={"1rem"}>
             <ExitToAppIcon />
 
-            <Typography>Logout</Typography>
+            <Typography>Logout from dashboard</Typography>
           </Stack>
         </Link>
       </Stack>

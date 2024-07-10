@@ -153,7 +153,7 @@ const Chat = ({ chatId, user }) => {
       const messageForAlert = {
         content: data.message,
         sender: {
-          _id: "djasdhajksdhasdsadasdas",
+          _id: "aslipastahehehehe",
           name: "Admin",
         },
         chat: chatId,
@@ -220,7 +220,6 @@ const Chat = ({ chatId, user }) => {
             sx={{
               position: "absolute",
               left: "1.5rem",
-              // rotate: "30deg",
             }}
             onClick={handleFileOpen}
           >
@@ -231,15 +230,11 @@ const Chat = ({ chatId, user }) => {
             placeholder="Type Message Here..."
             value={message}
             onChange={messageOnChange}
-            // style={{
-            //   width:"100%",
-            // }}
           />
 
           <IconButton
             type="submit"
             sx={{
-              // rotate: "-30deg",
               bgcolor: "rgba(0,0,0,0.7)",
               color: "white",
               marginLeft: "1rem",

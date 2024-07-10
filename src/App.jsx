@@ -8,12 +8,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { userExists, userNotExists } from "./redux/reducers/auth";
 import { Toaster } from "react-hot-toast";
 import { SocketProvider } from "./socket";
+import { AboutSection } from "./pages/About";
 
 const Home = lazy(() => import("./pages/Home"));
 const Login = lazy(() => import("./pages/Login"));
 const Chat = lazy(() => import("./pages/Chat"));
 const Groups = lazy(() => import("./pages/Groups"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const About = lazy(()=>import("./pages/About"))
 
 const AdminLogin = lazy(() => import("./pages/admin/AdminLogin"));
 const Dashboard = lazy(() => import("./pages/admin/Dashboard"));
@@ -61,6 +63,7 @@ const App = () => {
               </ProtectedRoute>
             }
           />
+          <Route path="/about" element={<AboutSection/>}/>
 
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<Dashboard />} />

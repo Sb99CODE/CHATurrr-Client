@@ -1,11 +1,12 @@
+import { server } from "../../constants/config";
+import { useErrors } from "../../hooks/hook";
+import { transformImage } from "../../lib/features";
 import { useFetchData } from "6pp";
 import { Avatar, Skeleton } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import AdminLayout from "../../components/layout/AdminLayout";
 import Table from "../../components/shared/Table";
-import { server } from "../../constants/config";
-import { useErrors } from "../../hooks/hook";
-import { transformImage } from "../../lib/features";
+import { LayoutLoader } from "../../components/layout/Loaders";
 
 const columns = [
   {
@@ -79,7 +80,7 @@ const UserManagement = () => {
   return (
     <AdminLayout>
       {loading ? (
-        <Skeleton height={"100vh"} />
+        <LayoutLoader/>
       ) : (
         <Table heading={"All Users"} columns={columns} rows={rows} />
       )}

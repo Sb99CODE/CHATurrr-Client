@@ -70,7 +70,7 @@ export const AboutSection = () => {
   const navigateBack = () => { navigate("/") }
 
   return (
-    <Container sx={{ bgcolor: "lightgray", animation: `${fadeIn} 1s ease-in-out` }}>
+    <Container  sx={{ bgcolor: "lightgray", animation: `${fadeIn} 1s ease-in-out` , display:'flex' , flexDirection: 'column',}}>
       <Tooltip title="back">
         <IconButton
           sx={{
@@ -152,7 +152,7 @@ export const AboutSection = () => {
           <Typography variant="h6" component="h2" gutterBottom sx={{
             fontFamily: 'Playwrite PE, Arial, sans-serif',
             fontSize: {
-              xs: '0.8rem',
+              xs: '0.85rem',
               sm: '1.1rem',
               md: '1.5rem',
             }
@@ -164,7 +164,7 @@ export const AboutSection = () => {
 
         <Typography variant="body1" paragraph sx={{
           fontFamily: 'Playwrite PE, Arial, sans-serif', fontSize: {
-            xs: '0.5rem',
+            xs: '0.65rem',
             sm: '1rem',
             md: '1.2rem',
           }
@@ -205,7 +205,7 @@ export const AboutSection = () => {
         </Box>
 
       <Box sx={{
-        marginTop:'25px',
+        marginTop:'3%',
         position: 'relative',
         p: 1,
         textAlign: 'center',

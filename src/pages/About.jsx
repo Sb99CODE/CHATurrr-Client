@@ -113,7 +113,7 @@ export const AboutSection = () => {
         >
           <Avatar
             alt="Profile Picture"
-            src="https://res.cloudinary.com/dvdmuhsum/image/upload/v1720645374/profileImage_aimdor.jpg"
+            src="https://res.cloudinary.com/dvdmuhsum/image/upload/v1720678481/agzy3aphhbnl0bco0gih.jpg"
             sx={{ width: 150, height: 150 }}
           />
         </Box>
@@ -123,7 +123,7 @@ export const AboutSection = () => {
           display: 'inline-block',
           overflow: 'hidden',
           whiteSpace: 'nowrap',
-          animation: `${typing} 6s steps(30, end), ${blink} 2s step-end infinite`,
+          animation: `${typing} 8s steps(30, end), ${blink} 2s step-end infinite`,
          }}>
         <Typography variant="h4" component="h1" gutterBottom sx={{ fontFamily: 'Playwrite PE, Arial, sans-serif' }}>
           Sujal Bhati
@@ -134,7 +134,7 @@ export const AboutSection = () => {
           display: 'inline-block',
           overflow: 'hidden',
           whiteSpace: 'nowrap',
-          animation: `${showText} 0s 6s forwards, ${typing} 2s steps(30, end) 6s forwards, ${blink} 0.75s step-end infinite 8s`,
+          animation: `${showText} 0s 8s forwards, ${typing} 3s steps(30, end) 8s forwards, ${blink} 0.75s step-end infinite 11s`,
           visibility: 'hidden',
           fontFamily: 'Playwrite PE, Arial, sans-serif'
         }}>
@@ -145,7 +145,7 @@ export const AboutSection = () => {
         <br />
 
         <Typography variant="body1" paragraph sx={{ fontFamily: 'Playwrite PE, Arial, sans-serif' }}>
-          I am passionate about web development and solving complex problems. With skills in React, Node.js, and SQL, I strive to build scalable and user-friendly applications that make a positive impact. In addition, I excel in competitive programming, consistently honing my problem-solving abilities and algorithmic skills.
+          I am passionate about web development and solving complex problems. With skills in React, Node.js, and SQL, I strive to build scalable and user-friendly applications that make a positive impact. In addition, I am enhancing my competitive programming skills, particularly in C++, while excelling in refining my problem-solving abilities and algorithmic skills.
         </Typography>
         <Box mt={2}>
           <Button
@@ -172,7 +172,7 @@ export const AboutSection = () => {
             variant="contained"
             color="primary"
             startIcon={<DownloadIcon />}
-            href="your-resume-url.pdf"
+           href="https://drive.google.com/uc?export=download&id=1OxtpXaJ89ygMVj1wH7Ajux0CEwKdvdxg"
             download
             sx={{ m: 1, background: "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)" }}
           >

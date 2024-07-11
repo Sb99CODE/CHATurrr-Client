@@ -289,6 +289,7 @@ const Groups = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          // justifyContent:"center",
           position: "relative",
           padding: "1rem 3rem",
         }}
@@ -324,7 +325,7 @@ const Groups = () => {
                       boxShadow: "0 0 0.5rem  rgba(0,0,0,0.2)",
                       padding: "0.5rem 1rem",
                       borderRadius: "1rem",
-                      width:"80%",
+                      width:"95%",
                     }}
                     handler={removeMemberHandler}
                   />

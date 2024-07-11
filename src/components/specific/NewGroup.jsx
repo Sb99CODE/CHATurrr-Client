@@ -48,10 +48,10 @@ const NewGroup = () => {
   };
 
   const submitHandler = () => {
-    if (!groupName.value) return toast.error("Group name is required");
+    if (!groupName.value) return toast.error("Group name is required field");
 
     if (selectedMembers.length < 2)
-      return toast.error("Please select atleast 3 Members");
+      return toast.error("Please select atleast 3 members");
 
     newGroup("Creating New Group...", {
       name: groupName.value,
@@ -67,7 +67,7 @@ const NewGroup = () => {
 
   return (
     <Dialog onClose={closeHandler} open={isNewGroup}>
-      <Stack p={{ xs: "1rem", sm: "3rem" }} width={"25rem"} spacing={"2rem"}>
+      <Stack p={{ xs: "1.2rem", sm: "3rem" }} width={"21rem"} spacing={"1.5rem"}>
         <DialogTitle textAlign={"center"} variant="h4">
           New Group
         </DialogTitle>

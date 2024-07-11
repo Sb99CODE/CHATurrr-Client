@@ -62,7 +62,7 @@ const Home = () => {
               <ArrowForwardIos fontSize="small" />
             </IconButton>
             <Typography variant="body1" sx={{ fontFamily: "Georgia, 'Times New Roman', Times, serif",}}>
-              Select friends from <Menu fontSize="small" sx={{ verticalAlign: "middle", marginLeft: "0.2rem", }} /> icon to chat
+              Click on <Search fontSize="small" sx={{ verticalAlign: "middle", marginLeft: "0.2rem", }} /> icon to search friends
             </Typography>
           </Box>
 
@@ -77,15 +77,16 @@ const Home = () => {
               <ArrowForwardIos fontSize="small" />
             </IconButton>
             <Typography variant="body1" sx={{ fontFamily: "Georgia, 'Times New Roman', Times, serif",}}>
-              Click on <Search fontSize="small" sx={{ verticalAlign: "middle", marginLeft: "0.2rem", }} /> icon to search friends
+              Select friends from <Menu fontSize="small" sx={{ verticalAlign: "middle", marginLeft: "0.2rem", }} /> icon or chatlist to chat
             </Typography>
           </Box>
+
 
         </Typography>
         <Button
           variant="contained"
           color="primary"
-          size="large"
+          size="medium"
           onClick={handleButtonClick}
           sx={{
             background: "#2d2d2d",

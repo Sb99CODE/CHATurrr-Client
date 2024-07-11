@@ -68,14 +68,14 @@ export const AboutSection = () => {
                 </Typography>
                 <br />
                 <Typography variant="body1" paragraph sx={{ fontFamily: 'Playwrite PE, Arial, sans-serif' }}>
-                    A brief bio or description about yourself. Mention your interests, skills, and what you are passionate about.
+                I am passionate about web development and solving complex problems. With skills in React, Node.js, and SQL, I strive to build scalable and user-friendly applications that make a positive impact. In addition, I excel in competitive programming, consistently honing my problem-solving abilities and algorithmic skills.
                 </Typography>
                 <Box mt={2}>
                     <Button
                         variant="contained"
                         color="primary"
                         startIcon={<GitHubIcon />}
-                        href="https://github.com/your-github-username"
+                        href="https://github.com/Sb99CODE"
                         target="_blank"
                         sx={{ m: 1, background: "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)" }}
                     >
@@ -85,7 +85,7 @@ export const AboutSection = () => {
                         variant="contained"
                         color="primary"
                         startIcon={<LinkedInIcon />}
-                        href="https://linkedin.com/in/your-linkedin-username"
+                        href="https://www.linkedin.com/in/sujal-bhati-92135b226"
                         target="_blank"
                         sx={{ m: 1, background: "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)" }}
                     >

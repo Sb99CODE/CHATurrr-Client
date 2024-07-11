@@ -119,18 +119,18 @@ export const AboutSection = () => {
         </Box>
 
         <br />
-         <Box sx={{
+        <Box sx={{
           display: 'inline-block',
           overflow: 'hidden',
           whiteSpace: 'nowrap',
           animation: `${typing} 8s steps(30, end), ${blink} 2s step-end infinite`,
-         }}>
-        <Typography variant="h4" component="h1" gutterBottom sx={{ fontFamily: 'Playwrite PE, Arial, sans-serif' }}>
-          Sujal Bhati
-        </Typography>
+        }}>
+          <Typography variant="h4" component="h1" gutterBottom sx={{ fontFamily: 'Playwrite PE, Arial, sans-serif' }}>
+            Sujal Bhati
+          </Typography>
         </Box>
         <br />
-        <Box sx={{ 
+        <Box sx={{
           display: 'inline-block',
           overflow: 'hidden',
           whiteSpace: 'nowrap',
@@ -139,7 +139,7 @@ export const AboutSection = () => {
           fontFamily: 'Playwrite PE, Arial, sans-serif'
         }}>
           <Typography variant="h6" component="h2" gutterBottom sx={{ fontFamily: 'Playwrite PE, Arial, sans-serif' }}>
-            Enthusiastic Programmer
+           Dedicated and Enthusiastic Programmer
           </Typography>
         </Box>
         <br />
@@ -172,7 +172,7 @@ export const AboutSection = () => {
             variant="contained"
             color="primary"
             startIcon={<DownloadIcon />}
-           href="https://drive.google.com/uc?export=download&id=1OxtpXaJ89ygMVj1wH7Ajux0CEwKdvdxg"
+            href="https://drive.google.com/uc?export=download&id=1FylO8-9uHqyhXg1Wrc1tONe071BOtskx"
             download
             sx={{ m: 1, background: "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)" }}
           >
@@ -180,6 +180,20 @@ export const AboutSection = () => {
           </Button>
         </Box>
       </Box>
+
+      <Box sx={{
+        position: 'fixed',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        p: 1,
+        textAlign: 'center',
+      }}>
+        <Typography  variant="body2" color="textSecondary"> <i>
+          &copy; 2024 Sujal Bhati. All rights reserved. </i>
+        </Typography>
+      </Box>
+
     </Container>
   );
 };

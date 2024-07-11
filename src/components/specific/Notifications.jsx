@@ -23,7 +23,7 @@ const Notifications = () => {
   return (
     <Dialog open={isNotification} onClose={closeHandler}>
       <Stack p={{ xs: "1rem", sm: "2rem" }} maxWidth={"25rem"}>
-        <DialogTitle>Notifications</DialogTitle>
+        <DialogTitle sx={{fontFamily:"Georgia, 'Times New Roman', Times, serif"}}>Notifications</DialogTitle>
 
         {isLoading ? (
           <Skeleton />
@@ -39,7 +39,7 @@ const Notifications = () => {
                 />
               ))
             ) : (
-              <Typography textAlign={"center"}>No notifications</Typography>
+              <Typography textAlign={"center"} sx={{fontFamily:"Georgia, 'Times New Roman', Times, serif"}}>No notifications</Typography>
             )}
           </>
         )}
@@ -58,7 +58,7 @@ const NotificationItem = memo(({ sender, _id, handler }) => {
         spacing={"1rem"}
         width={"100%"}
       >
-        <Avatar />
+        <Avatar avatar={avatar}/>
         <Typography
           variant="body1"
           sx={{
@@ -69,6 +69,7 @@ const NotificationItem = memo(({ sender, _id, handler }) => {
             overflow: "hidden",
             textOverflow: "ellipsis",
             width: "100%",
+            fontFamily:"Georgia, 'Times New Roman', Times, serif"
           }}
         >
           {`${name} has sent you a friend request.`}

@@ -219,7 +219,7 @@ const Groups = () => {
         </>
       ) : (
         <>
-          <Typography variant="h4">{groupName}</Typography>
+          <Typography variant="h4" sx={{fontFamily:"Georgia, 'Times New Roman', Times, serif"}}>{groupName}</Typography>
           <IconButton
             disabled={isLoadingGroupName}
             onClick={() => setIsEdit(true)}
@@ -406,6 +406,7 @@ const GroupsList = ({ w = "100%", myGroups = [], chatId }) => {
           padding="1rem"
           color={"white"}
           display={"bold"}
+          fontFamily={"Georgia, 'Times New Roman', Times, serif"}
         >
           No groups
         </Typography>
@@ -433,7 +434,7 @@ const GroupListItem = memo(
       >
         <Stack direction={"row"} spacing={"1rem"} alignItems={"center"}>
           <AvatarCard avatar={avatar} />
-          <Typography color={"white"}>{name}</Typography>
+          <Typography color={"white"} sx={{fontFamily:"Georgia, 'Times New Roman', Times, serif"}}>{name}</Typography>
         </Stack>
       </Link>
     );

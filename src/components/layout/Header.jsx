@@ -10,10 +10,8 @@ import { server } from "../../constants/config";
 import { userNotExists } from "../../redux/reducers/auth";
 import { resetNotificationCount } from "../../redux/reducers/chat";
 import {
-  setIsMobile,
-  setIsNewGroup,
-  setIsNotification,
-  setIsSearch,
+  setIsMobile,setIsNewGroup,
+  setIsNotification,setIsSearch,
 } from "../../redux/reducers/misc";
 
 const link = document.createElement('link');

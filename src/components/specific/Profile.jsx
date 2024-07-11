@@ -58,8 +58,8 @@ const ProfileCard = ({ text, Icon, heading }) => (
       {Icon && Icon}
 
       <Stack>
-        <Typography variant="body1">{text}</Typography>
-        <Typography color={"lightgray"} variant="caption">
+        <Typography variant="body1" sx={{fontFamily:"Georgia, 'Times New Roman', Times, serif"}}>{text}</Typography>
+        <Typography color={"lightgray"} variant="caption" >
           {heading}
         </Typography>
       </Stack>

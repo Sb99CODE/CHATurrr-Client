@@ -45,7 +45,7 @@ const NewGroup = () => {
   return (
     <Dialog onClose={closeHandler} open={isNewGroup}>
       <Stack p={{ xs: "1.2rem", sm: "3rem" }} width={"100%"} spacing={"1rem"}>
-        <DialogTitle textAlign={"center"} variant="h5">
+        <DialogTitle textAlign={"center"} variant="h5" sx={{fontFamily:"Georgia, 'Times New Roman', Times, serif"}}>
           New Group
         </DialogTitle>
 
@@ -55,7 +55,7 @@ const NewGroup = () => {
           onChange={groupName.changeHandler}
         />
 
-        <Typography variant="body1">Members</Typography>
+        <Typography variant="body1" sx={{fontFamily:"Georgia, 'Times New Roman', Times, serif"}}>Members</Typography>
 
         <Stack>
           {isLoading ? (

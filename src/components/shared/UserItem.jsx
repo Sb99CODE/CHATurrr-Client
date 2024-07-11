@@ -33,6 +33,7 @@ const UserItem = ({
             overflow: "hidden",
             textOverflow: "ellipsis",
             width: "100%",
+            fontFamily:"Georgia, 'Times New Roman', Times, serif"
           }}
         >
           {name}

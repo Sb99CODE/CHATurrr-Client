@@ -20,6 +20,11 @@ import { server } from "../constants/config";
 import { userExists } from "../redux/reducers/auth";
 import { usernameValidator } from "../utils/validators";
 
+const link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css2?family=Playwrite+PE:wght@100..400&display=swap';
+link.rel = 'stylesheet';
+document.head.appendChild(link);
+
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -141,7 +146,8 @@ const Login = () => {
             <>
               <Typography variant="h4"
               style={{
-                color:"black"
+                color:"black",
+                fontFamily:"Georgia, 'Times New Roman', Times, serif"
               }}>
                 Login
               </Typography>
@@ -211,12 +217,13 @@ const Login = () => {
                 onSubmit={handleSignUp}
 
               >
-                <Stack position={"relative"} width={"7.5rem"} margin={"auto"}>
+                <Stack position={"relative"} width={"8rem"} margin={"auto"} textAlign={"center"}>
                   <Avatar
                     sx={{
-                      width: "7.5rem",
-                      height: "7.5rem",
-                      objectFit: "contain",
+                      width: "8rem",
+                      height: "8rem",
+                      objectFit: "cover",
+                      // margin:"auto"
                     }}
                     src={avatar.preview}
                   />
@@ -246,7 +253,7 @@ const Login = () => {
 
                 {avatar.error && (
                   <Typography
-                    m={"0.5rem auto"}
+                    m={"1rem auto"}
                     width={"fit-content"}
                     display={"block"}
                     color="error"

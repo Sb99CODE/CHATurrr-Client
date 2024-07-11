@@ -38,7 +38,7 @@ const Search = () => {
 
   return (
     <Dialog open={isSearch} onClose={searchCloseHandler}>
-      <Stack p={"2rem"} direction={"column"} width={"21.5rem"}>
+      <Stack p={"2rem"} direction={"column"} width={"100%"}>
         <DialogTitle textAlign={"center"}>Find Friends</DialogTitle>
         <TextField
           label=""
@@ -55,7 +55,7 @@ const Search = () => {
           }}
         />
 
-        <List>
+        <List sx={{width:"100%"}}>
           {users.map((i) => (
             <UserItem
               user={i}

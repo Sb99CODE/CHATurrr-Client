@@ -1,44 +1,24 @@
 import { useInputValidation } from "6pp";
-import {
-  Button,
-  Dialog,
-  DialogTitle,
-  Skeleton,
-  Stack,
-  TextField,
-  Typography,
-} from "@mui/material";
 import React, { useState } from "react";
+import {Button,Dialog,DialogTitle,Skeleton,Stack,TextField,Typography,} from "@mui/material";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { useAsyncMutation, useErrors } from "../../hooks/hook";
-import {
-  useAvailableFriendsQuery,
-  useNewGroupMutation,
-} from "../../redux/api/api";
+import {useAvailableFriendsQuery,useNewGroupMutation,} from "../../redux/api/api";
 import { setIsNewGroup } from "../../redux/reducers/misc";
 import UserItem from "../shared/UserItem";
 
 const NewGroup = () => {
   const { isNewGroup } = useSelector((state) => state.misc);
   const dispatch = useDispatch();
-
   const { isError, isLoading, error, data } = useAvailableFriendsQuery();
   const [newGroup, isLoadingNewGroup] = useAsyncMutation(useNewGroupMutation);
-
   const groupName = useInputValidation("");
-
   const [selectedMembers, setSelectedMembers] = useState([]);
-
   const errors = [
-    {
-      isError,
-      error,
-    },
+    { isError, error,},
   ];
-
   useErrors(errors);
-
   const selectMemberHandler = (id) => {
     setSelectedMembers((prev) =>
       prev.includes(id)
@@ -49,15 +29,12 @@ const NewGroup = () => {
 
   const submitHandler = () => {
     if (!groupName.value) return toast.error("Group name is required field");
-
     if (selectedMembers.length < 2)
       return toast.error("Please select atleast 3 members");
-
     newGroup("Creating New Group...", {
       name: groupName.value,
       members: selectedMembers,
     });
-
     closeHandler();
   };
 

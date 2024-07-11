@@ -100,6 +100,7 @@ export const AboutSection = () => {
       >
         <Box
           sx={{
+            marginTop: "1rem",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -114,7 +115,10 @@ export const AboutSection = () => {
           <Avatar
             alt="Profile Picture"
             src="https://res.cloudinary.com/dvdmuhsum/image/upload/v1720678481/agzy3aphhbnl0bco0gih.jpg"
-            sx={{ width: 150, height: 150 }}
+            sx={{
+              width: { xs: 100, sm: 150 },
+              height: { xs: 100, sm: 150 }
+            }}
           />
         </Box>
 
@@ -125,7 +129,14 @@ export const AboutSection = () => {
           whiteSpace: 'nowrap',
           animation: `${typing} 8s steps(30, end), ${blink} 2s step-end infinite`,
         }}>
-          <Typography variant="h4" component="h1" gutterBottom sx={{ fontFamily: 'Playwrite PE, Arial, sans-serif' }}>
+          <Typography variant="h4" component="h1" gutterBottom sx={{
+            fontFamily: 'Playwrite PE, Arial, sans-serif',
+            fontSize: {
+              xs: '1.2rem',
+              sm: '1.8rem',
+              md: '2.3rem',
+            },
+          }}>
             Sujal Bhati
           </Typography>
         </Box>
@@ -134,20 +145,33 @@ export const AboutSection = () => {
           display: 'inline-block',
           overflow: 'hidden',
           whiteSpace: 'nowrap',
-          animation: `${showText} 0s 8s forwards, ${typing} 3s steps(30, end) 8s forwards, ${blink} 0.75s step-end infinite 11s`,
+          animation: `${showText} 0s 7s forwards, ${typing} 2.5s steps(30, end) 7s forwards, ${blink} 0.75s step-end infinite 10s`,
           visibility: 'hidden',
           fontFamily: 'Playwrite PE, Arial, sans-serif'
         }}>
-          <Typography variant="h6" component="h2" gutterBottom sx={{ fontFamily: 'Playwrite PE, Arial, sans-serif' }}>
-           Dedicated and Enthusiastic Programmer
+          <Typography variant="h6" component="h2" gutterBottom sx={{
+            fontFamily: 'Playwrite PE, Arial, sans-serif',
+            fontSize: {
+              xs: '0.8rem',
+              sm: '1.1rem',
+              md: '1.5rem',
+            }
+          }}>
+            Hello , I am a programmer
           </Typography>
         </Box>
         <br />
 
-        <Typography variant="body1" paragraph sx={{ fontFamily: 'Playwrite PE, Arial, sans-serif' }}>
+        <Typography variant="body1" paragraph sx={{
+          fontFamily: 'Playwrite PE, Arial, sans-serif', fontSize: {
+            xs: '0.5rem',
+            sm: '1rem',
+            md: '1.2rem',
+          }
+        }}>
           I am passionate about web development and solving complex problems. With skills in React, Node.js, and SQL, I strive to build scalable and user-friendly applications that make a positive impact. In addition, I am enhancing my competitive programming skills, particularly in C++, while excelling in refining my problem-solving abilities and algorithmic skills.
         </Typography>
-        <Box mt={2}>
+        <Box mt={1}>
           <Button
             variant="contained"
             color="primary"
@@ -179,19 +203,17 @@ export const AboutSection = () => {
             Download my Resume
           </Button>
         </Box>
-      </Box>
 
       <Box sx={{
-        position: 'fixed',
-        bottom: 0,
-        left: 0,
-        right: 0,
+        marginTop:'25px',
+        position: 'relative',
         p: 1,
         textAlign: 'center',
       }}>
-        <Typography  variant="body2" color="textSecondary"> <i>
+        <Typography variant="body2" color="textSecondary"> <i>
           &copy; 2024 Sujal Bhati. All rights reserved. </i>
         </Typography>
+      </Box>
       </Box>
 
     </Container>

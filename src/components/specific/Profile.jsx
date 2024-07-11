@@ -1,13 +1,8 @@
-import React from "react";
 import { Avatar, Box, Stack, Typography } from "@mui/material";
-import {
-  PermIdentityOutlined as FaceIcon,
-  AlternateEmail as UserNameIcon,
-  CalendarMonth as CalendarIcon,
-} from "@mui/icons-material";
+import {CalendarMonth as CalendarIcon,PermIdentityOutlined as FaceIcon,AlternateEmail as UserNameIcon,} from "@mui/icons-material";
 import moment from "moment";
+import React from "react";
 import { transformImage } from "../../lib/features";
-import { theme } from "../../constants/color";
 
 const Profile = ({ user }) => {
   return (

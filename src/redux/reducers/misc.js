@@ -22,6 +22,9 @@ const miscSlice = createSlice({
     setIsNewGroup: (state, action) => {
       state.isNewGroup = action.payload;
     },
+    setIsSearch: (state, action) => {
+      state.isSearch = action.payload;
+    },
     setIsAddMember: (state, action) => {
       state.isAddMember = action.payload;
     },
@@ -30,9 +33,6 @@ const miscSlice = createSlice({
     },
     setIsMobile: (state, action) => {
       state.isMobile = action.payload;
-    },
-    setIsSearch: (state, action) => {
-      state.isSearch = action.payload;
     },
     setIsFileMenu: (state, action) => {
       state.isFileMenu = action.payload;

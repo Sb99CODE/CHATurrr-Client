@@ -14,7 +14,7 @@ const api = createApi({
       }),
       providesTags: ["Chat"],
     }),
-
+    
     searchUser: builder.query({
       query: (name) => ({
         url: `user/search?name=${name}`,

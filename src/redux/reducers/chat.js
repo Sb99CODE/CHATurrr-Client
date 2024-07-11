@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getOrSaveFromStorage } from "../../lib/features";
 import { NEW_MESSAGE_ALERT } from "../../constants/events";
+import { getOrSaveFromStorage } from "../../lib/features";
 
 const initialState = {
   notificationCount: 0,
@@ -28,11 +28,9 @@ const chatSlice = createSlice({
 
     setNewMessagesAlert: (state, action) => {
       const chatId = action.payload.chatId;
-
       const index = state.newMessagesAlert.findIndex(
         (item) => item.chatId === chatId
       );
-
       if (index !== -1) {
         state.newMessagesAlert[index].count += 1;
       } else {

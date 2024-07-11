@@ -1,23 +1,7 @@
-import {
-  Add as AddIcon,
-  Group as GroupIcon,
-  Logout as LogoutIcon,
-  Menu as MenuIcon,
-  Notifications as NotificationsIcon,
-  Search as SearchIcon,
-} from "@mui/icons-material";
-import {
-  AppBar,
-  Backdrop,
-  Badge,
-  Box,
-  IconButton,
-  Toolbar,
-  Tooltip,
-  Typography,
-} from "@mui/material";
-import axios from "axios";
 import React, { Suspense, lazy } from "react";
+import {Add as AddIcon,Group as GroupIcon, Logout as LogoutIcon,Menu as MenuIcon, Notifications as NotificationsIcon,Search as SearchIcon,} from "@mui/icons-material";
+import {AppBar,Backdrop,Badge,Box,IconButton,Toolbar,Tooltip,Typography,} from "@mui/material";
+import axios from "axios";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -49,22 +33,14 @@ const Header = () => {
     (state) => state.misc
   );
   const { notificationCount } = useSelector((state) => state.chat);
-
   const handleMobile = () => dispatch(setIsMobile(true));
-
   const openSearch = () => dispatch(setIsSearch(true));
-
-  const openNewGroup = () => {
-    dispatch(setIsNewGroup(true));
-  };
-
+  const openNewGroup = () => dispatch(setIsNewGroup(true));
   const openNotification = () => {
     dispatch(setIsNotification(true));
     dispatch(resetNotificationCount());
   };
-
   const navigateToGroup = () => navigate("/groups");
-
   const logoutHandler = async () => {
     try {
       const { data } = await axios.get(`${server}/api/v1/user/logout`, {

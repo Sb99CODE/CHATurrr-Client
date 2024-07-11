@@ -1,13 +1,4 @@
-import {
-  Avatar,
-  Button,
-  Dialog,
-  DialogTitle,
-  ListItem,
-  Skeleton,
-  Stack,
-  Typography,
-} from "@mui/material";
+import {Avatar,Button,Dialog,DialogTitle,ListItem,Skeleton,Stack,Typography,} from "@mui/material";
 import React, { memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useAsyncMutation, useErrors } from "../../hooks/hook";
@@ -19,20 +10,14 @@ import { setIsNotification } from "../../redux/reducers/misc";
 
 const Notifications = () => {
   const { isNotification } = useSelector((state) => state.misc);
-
   const dispatch = useDispatch();
-
   const { isLoading, data, error, isError } = useGetNotificationsQuery();
-
   const [acceptRequest] = useAsyncMutation(useAcceptFriendRequestMutation);
-
   const friendRequestHandler = async ({ _id, accept }) => {
     dispatch(setIsNotification(false));
     await acceptRequest("Accepting...", { requestId: _id, accept });
   };
-
   const closeHandler = () => dispatch(setIsNotification(false));
-
   useErrors([{ error, isError }]);
 
   return (
@@ -74,7 +59,6 @@ const NotificationItem = memo(({ sender, _id, handler }) => {
         width={"100%"}
       >
         <Avatar />
-
         <Typography
           variant="body1"
           sx={{

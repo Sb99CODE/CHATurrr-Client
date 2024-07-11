@@ -1,13 +1,8 @@
-import { Drawer, Grid, Skeleton } from "@mui/material";
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import {
-  NEW_MESSAGE_ALERT,
-  NEW_REQUEST,
-  ONLINE_USERS,
-  REFETCH_CHATS,
-} from "../../constants/events";
+import { Drawer, Grid, Skeleton } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import {NEW_MESSAGE_ALERT,NEW_REQUEST,ONLINE_USERS,REFETCH_CHATS,} from "../../constants/events";
 import { useErrors, useSocketEvents } from "../../hooks/hook";
 import { getOrSaveFromStorage } from "../../lib/features";
 import { useMyChatsQuery } from "../../redux/api/api";

@@ -116,8 +116,8 @@ export const AboutSection = () => {
             alt="Profile Picture"
             src="https://res.cloudinary.com/dvdmuhsum/image/upload/v1720678481/agzy3aphhbnl0bco0gih.jpg"
             sx={{
-              width: { xs: 100, sm: 150 },
-              height: { xs: 100, sm: 150 }
+              width: { xs: 110, sm: 150 },
+              height: { xs: 110, sm: 150 }
             }}
           />
         </Box>
@@ -200,7 +200,7 @@ export const AboutSection = () => {
             download
             sx={{ m: 1, background: "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)" }}
           >
-            Download my Resume
+            my Resume
           </Button>
         </Box>
 

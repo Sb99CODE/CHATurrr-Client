@@ -60,7 +60,7 @@ const moveLetters = keyframes`
 
 const LoadingText = styled.div`
   font-family: Playwrite PE, Arial, sans-serif;
-  font-size: 5vw;
+  font-size: 6vw;
   line-height: 64px;
   letter-spacing: 10px;
   margin-bottom: 32px;

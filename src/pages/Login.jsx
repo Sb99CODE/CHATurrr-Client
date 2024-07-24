@@ -43,7 +43,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const toastId = toast.loading("Logging in to Chatur...");
+    const toastId = toast.loading("Logging in...");
 
     setIsLoading(true);
     const config = {

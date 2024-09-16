@@ -70,7 +70,14 @@ export const AboutSection = () => {
   const navigateBack = () => { navigate("/") }
 
   return (
-    <Container  sx={{ bgcolor: "lightgray", animation: `${fadeIn} 1s ease-in-out` , display:'flex' , flexDirection: 'column',}}>
+    <Container
+      sx={{
+        bgcolor: "lightgray",
+        animation: `${fadeIn} 1s ease-in-out`,
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Tooltip title="back">
         <IconButton
           sx={{
@@ -104,7 +111,8 @@ export const AboutSection = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundImage: "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)",
+            backgroundImage:
+              "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)",
             borderRadius: "50%",
             border: "6px solid transparent",
             boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)",
@@ -117,59 +125,82 @@ export const AboutSection = () => {
             src="https://res.cloudinary.com/dvdmuhsum/image/upload/v1720678481/agzy3aphhbnl0bco0gih.jpg"
             sx={{
               width: { xs: 110, sm: 150 },
-              height: { xs: 110, sm: 150 }
+              height: { xs: 110, sm: 150 },
             }}
           />
         </Box>
 
         <br />
-        <Box sx={{
-          display: 'inline-block',
-          overflow: 'hidden',
-          whiteSpace: 'nowrap',
-          animation: `${typing} 8s steps(30, end), ${blink} 2s step-end infinite`,
-        }}>
-          <Typography variant="h4" component="h1" gutterBottom sx={{
-            fontFamily: 'Playwrite PE, Arial, sans-serif',
-            fontSize: {
-              xs: '1.2rem',
-              sm: '1.8rem',
-              md: '2.3rem',
-            },
-          }}>
+        <Box
+          sx={{
+            display: "inline-block",
+            overflow: "hidden",
+            whiteSpace: "nowrap",
+            animation: `${typing} 8s steps(30, end), ${blink} 2s step-end infinite`,
+          }}
+        >
+          <Typography
+            variant="h4"
+            component="h1"
+            gutterBottom
+            sx={{
+              fontFamily: "Playwrite PE, Arial, sans-serif",
+              fontSize: {
+                xs: "1.2rem",
+                sm: "1.8rem",
+                md: "2.3rem",
+              },
+            }}
+          >
             Sujal Bhati
           </Typography>
         </Box>
         <br />
-        <Box sx={{
-          display: 'inline-block',
-          overflow: 'hidden',
-          whiteSpace: 'nowrap',
-          animation: `${showText} 0s 7s forwards, ${typing} 2.5s steps(30, end) 7s forwards, ${blink} 0.75s step-end infinite 10s`,
-          visibility: 'hidden',
-          fontFamily: 'Playwrite PE, Arial, sans-serif'
-        }}>
-          <Typography variant="h6" component="h2" gutterBottom sx={{
-            fontFamily: 'Playwrite PE, Arial, sans-serif',
-            fontSize: {
-              xs: '0.85rem',
-              sm: '1.1rem',
-              md: '1.5rem',
-            }
-          }}>
+        <Box
+          sx={{
+            display: "inline-block",
+            overflow: "hidden",
+            whiteSpace: "nowrap",
+            animation: `${showText} 0s 7s forwards, ${typing} 2.5s steps(30, end) 7s forwards, ${blink} 0.75s step-end infinite 10s`,
+            visibility: "hidden",
+            fontFamily: "Playwrite PE, Arial, sans-serif",
+          }}
+        >
+          <Typography
+            variant="h6"
+            component="h2"
+            gutterBottom
+            sx={{
+              fontFamily: "Playwrite PE, Arial, sans-serif",
+              fontSize: {
+                xs: "0.85rem",
+                sm: "1.1rem",
+                md: "1.5rem",
+              },
+            }}
+          >
             Hello , I am a programmer
           </Typography>
         </Box>
         <br />
 
-        <Typography variant="body1" paragraph sx={{
-          fontFamily: 'Playwrite PE, Arial, sans-serif', fontSize: {
-            xs: '0.65rem',
-            sm: '1rem',
-            md: '1.2rem',
-          }
-        }}>
-          I am passionate about web development and solving complex problems. With skills in React, Node.js, and SQL, I strive to build scalable and user-friendly applications that make a positive impact. In addition, I am enhancing my competitive programming skills, particularly in C++, while excelling in refining my problem-solving abilities and algorithmic skills.
+        <Typography
+          variant="body1"
+          paragraph
+          sx={{
+            fontFamily: "Playwrite PE, Arial, sans-serif",
+            fontSize: {
+              xs: "0.65rem",
+              sm: "1rem",
+              md: "1.2rem",
+            },
+          }}
+        >
+          I strive to build scalable and user-friendly applications that make a positive impact. I'm skilled in C++ and JavaScript
+          and have hands-on experience with React.js, Node.js, MongoDB and SQL. I’ve
+          developed exciting projects like "Chatur," a real-time chatting
+          platform, and "BloodConnect," a comprehensive blood bank management
+          system. Feel free to check them out to see my work in action.
         </Typography>
         <Box mt={1}>
           <Button
@@ -178,7 +209,11 @@ export const AboutSection = () => {
             startIcon={<GitHubIcon />}
             href="https://github.com/Sb99CODE"
             target="_blank"
-            sx={{ m: 1, background: "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)" }}
+            sx={{
+              m: 1,
+              background:
+                "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)",
+            }}
           >
             GitHub
           </Button>
@@ -188,7 +223,11 @@ export const AboutSection = () => {
             startIcon={<LinkedInIcon />}
             href="https://www.linkedin.com/in/sujal-bhati-92135b226"
             target="_blank"
-            sx={{ m: 1, background: "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)" }}
+            sx={{
+              m: 1,
+              background:
+                "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)",
+            }}
           >
             LinkedIn
           </Button>
@@ -196,26 +235,32 @@ export const AboutSection = () => {
             variant="contained"
             color="primary"
             startIcon={<DownloadIcon />}
-            href="https://drive.google.com/uc?export=download&id=1FylO8-9uHqyhXg1Wrc1tONe071BOtskx"
+            href="https://drive.google.com/uc?export=download&id=19YcCjHrRvVpTEPFwh6jL31wSIRgk6QHw"
             download
-            sx={{ m: 1, background: "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)" }}
+            sx={{
+              m: 1,
+              background:
+                "radial-gradient(circle farthest-corner at 10% 20%, rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2%)",
+            }}
           >
             my Resume
           </Button>
         </Box>
 
-      <Box sx={{
-        marginTop:'3%',
-        position: 'relative',
-        p: 1,
-        textAlign: 'center',
-      }}>
-        <Typography variant="body2" color="textSecondary"> <i>
-          &copy; 2024 Sujal Bhati. All rights reserved. </i>
-        </Typography>
+        <Box
+          sx={{
+            marginTop: "3%",
+            position: "relative",
+            p: 1,
+            textAlign: "center",
+          }}
+        >
+          <Typography variant="body2" color="textSecondary">
+            {" "}
+            <i>&copy; 2024 Sujal Bhati. All rights reserved. </i>
+          </Typography>
+        </Box>
       </Box>
-      </Box>
-
     </Container>
   );
 };
